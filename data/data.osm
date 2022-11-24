@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='JOSM'>
+  <node id='137709' lat='36.92794119336' lon='124.9172946167' />
+  <node id='137711' lat='36.41686432553' lon='124.49706756592' />
+  <node id='137712' lat='36.19996027571' lon='124.88982879639' />
+  <node id='137713' lat='36.31955347245' lon='125.21941864014' />
+  <node id='137714' lat='36.75649253003' lon='125.12603485107' />
+  <node id='137716' lat='36.54495164806' lon='124.90630828857'>
+    <tag k='aeroway' v='vordme' />
+    <tag k='name' v='heee' />
+    <tag k='ref' v='577' />
+  </node>
+  <way id='103224'>
+    <nd ref='137709' />
+    <nd ref='137711' />
+    <nd ref='137712' />
+    <nd ref='137713' />
+    <nd ref='137714' />
+    <tag k='highway' v='motorway' />
+  </way>
+</osm>
