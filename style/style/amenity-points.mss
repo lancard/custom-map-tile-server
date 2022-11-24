@@ -2728,7 +2728,8 @@
     text-face-name: @standard-font;
     text-halo-radius: @standard-halo-radius;
     text-halo-fill: @standard-halo-fill;
-    text-dy: 50;
+    text-dy: 30;
+    text-allow-overlap: true;
   }
 
   [feature = 'aeroway_gate'][zoom >= 17] {
