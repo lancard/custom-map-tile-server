@@ -64,6 +64,12 @@
   [feature = 'aeroway_vordme'][zoom >= 1] {
     marker-file: url('symbols/aeroway/vordme.svg');
   }
+  [feature = 'aeroway_tacan'][zoom >= 1] {
+    marker-file: url('symbols/aeroway/tacan.svg');
+  }
+  [feature = 'aeroway_vortac'][zoom >= 1] {
+    marker-file: url('symbols/aeroway/vortac.svg');
+  }
 
   [feature = 'amenity_atm'][zoom >= 18] {
     marker-file: url('symbols/amenity/atm.svg');
@@ -2708,7 +2714,9 @@
     }
   }
 
-  [feature = 'aeroway_vordme'][zoom >= 1] {
+  [feature = 'aeroway_vordme'][zoom >= 1], 
+  [feature = 'aeroway_tacan'][zoom >= 1],
+  [feature = 'aeroway_vortac'][zoom >= 1] {
     text-name: "[name]";
     text-size: @standard-font-size;
     text-wrap-width: @standard-wrap-width;
