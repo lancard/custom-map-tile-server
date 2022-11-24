@@ -12,6 +12,6 @@ docker container run --rm -it \
 # import data
 docker run --rm -it \
         -v osm-data:/data/database/ \
-        -v /root/osm/data/data.osm:/data.osm \
-        -v /root/osm/data/run.sh:/run.sh \
+        -v $PWD/data/data.osm:/data.osm \
+        -v $PWD/data/run.sh:/run.sh \
         overv/openstreetmap-tile-server 
