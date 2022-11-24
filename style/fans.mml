@@ -52,21 +52,6 @@ Stylesheet:
   - style/addressing.mss
   - style/golf.mss
 Layer:
-  - id: aeroway-line
-    geometry: linestring
-    <<: *extents
-    Datasource:
-      <<: *osm2pgsql
-      table: |-
-        (SELECT
-            way
-          FROM planet_osm_line
-          WHERE aeroway LIKE 'airway_%'
-        ) AS aeroway_line
-    properties:
-      cache-features: true
-      minzoom: 1
-      maxzoom: 13
   - id: landcover-low-zoom
     geometry: polygon
     <<: *extents
@@ -2301,3 +2286,18 @@ Layer:
       table: *amenity_low_priority_sql
     properties:
       minzoom: 17
+  - id: aeroway-line
+    geometry: linestring
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: |-
+        (SELECT
+            way
+          FROM planet_osm_line
+          WHERE aeroway LIKE 'airway_%'
+        ) AS aeroway_line
+    properties:
+      cache-features: true
+      minzoom: 1
+      maxzoom: 13
