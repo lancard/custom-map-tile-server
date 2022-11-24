@@ -62,12 +62,15 @@
   }
 
   [feature = 'aeroway_vordme'][zoom >= 1] {
+    marker-allow-overlap: true;
     marker-file: url('symbols/aeroway/vordme.svg');
   }
   [feature = 'aeroway_tacan'][zoom >= 1] {
+    marker-allow-overlap: true;
     marker-file: url('symbols/aeroway/tacan.svg');
   }
   [feature = 'aeroway_vortac'][zoom >= 1] {
+    marker-allow-overlap: true;
     marker-file: url('symbols/aeroway/vortac.svg');
   }
 
@@ -2718,14 +2721,14 @@
   [feature = 'aeroway_tacan'][zoom >= 1],
   [feature = 'aeroway_vortac'][zoom >= 1] {
     text-name: "[name]";
-    text-size: @standard-font-size;
+    text-size: 20;
     text-wrap-width: @standard-wrap-width;
     text-line-spacing: @standard-line-spacing-size;
     text-fill: black;
     text-face-name: @standard-font;
     text-halo-radius: @standard-halo-radius;
     text-halo-fill: @standard-halo-fill;
-    text-dy: 110;
+    text-dy: 50;
   }
 
   [feature = 'aeroway_gate'][zoom >= 17] {
