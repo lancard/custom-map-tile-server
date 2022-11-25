@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git pull
+
 # copy volume
 docker volume rm osm-data
 docker volume create --name osm-data
