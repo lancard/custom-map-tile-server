@@ -70,9 +70,9 @@
 }
 
 #aeroway-point {
-  [feature = 'aeroway_vordme'][zoom >= 1], 
-  [feature = 'aeroway_tacan'][zoom >= 1],
-  [feature = 'aeroway_vortac'][zoom >= 1] {
+  [aeroway = 'vordme'][zoom >= 1], 
+  [aeroway = 'tacan'][zoom >= 1],
+  [aeroway = 'vortac'][zoom >= 1] {
     text-name: "[name]";
     text-size: 20;
     text-wrap-width: @standard-wrap-width;
@@ -85,19 +85,19 @@
     text-allow-overlap: true;
   }
 
-  [feature = 'aeroway_vordme'][zoom >= 1] {
+  [aeroway = 'vordme'][zoom >= 1] {
     marker-allow-overlap: true;
     marker-file: url('symbols/aeroway/vordme.svg');
   }
-  [feature = 'aeroway_tacan'][zoom >= 1] {
+  [aeroway = 'tacan'][zoom >= 1] {
     marker-allow-overlap: true;
     marker-file: url('symbols/aeroway/tacan.svg');
   }
-  [feature = 'aeroway_vortac'][zoom >= 1] {
+  [aeroway = 'vortac'][zoom >= 1] {
     marker-allow-overlap: true;
     marker-file: url('symbols/aeroway/vortac.svg');
   }
-  [feature = 'aeroway_fix'][zoom >= 1] {
+  [aeroway = 'fix'][zoom >= 1] {
     marker-allow-overlap: true;
     marker-file: url('symbols/aeroway/vortac.svg');
   }
