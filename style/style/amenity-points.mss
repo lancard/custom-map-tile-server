@@ -1246,12 +1246,6 @@
     marker-clip: false;
   }
 
-  [feature = 'leisure_golf_course'][zoom >= 15] {
-    marker-file: url('symbols/leisure/golf.svg');
-    marker-fill: @leisure-green;
-    marker-clip: false;
-  }
-
   [feature = 'tourism_picnic_site'][zoom >= 16] {
     marker-file: url('symbols/tourism/picnic.svg');
     marker-fill: @leisure-green;
