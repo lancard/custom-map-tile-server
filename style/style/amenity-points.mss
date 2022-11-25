@@ -61,19 +61,6 @@
     }
   }
 
-  [feature = 'aeroway_vordme'][zoom >= 1] {
-    marker-allow-overlap: true;
-    marker-file: url('symbols/aeroway/vordme.svg');
-  }
-  [feature = 'aeroway_tacan'][zoom >= 1] {
-    marker-allow-overlap: true;
-    marker-file: url('symbols/aeroway/tacan.svg');
-  }
-  [feature = 'aeroway_vortac'][zoom >= 1] {
-    marker-allow-overlap: true;
-    marker-file: url('symbols/aeroway/vortac.svg');
-  }
-
   [feature = 'amenity_atm'][zoom >= 18] {
     marker-file: url('symbols/amenity/atm.svg');
     marker-fill: @amenity-brown;
@@ -2715,21 +2702,6 @@
       text-halo-radius: @standard-halo-radius;
       text-halo-fill: rgba(255, 255, 255, 0.6);
     }
-  }
-
-  [feature = 'aeroway_vordme'][zoom >= 1], 
-  [feature = 'aeroway_tacan'][zoom >= 1],
-  [feature = 'aeroway_vortac'][zoom >= 1] {
-    text-name: "[name]";
-    text-size: 20;
-    text-wrap-width: @standard-wrap-width;
-    text-line-spacing: @standard-line-spacing-size;
-    text-fill: black;
-    text-face-name: @standard-font;
-    text-halo-radius: @standard-halo-radius;
-    text-halo-fill: @standard-halo-fill;
-    text-dy: 30;
-    text-allow-overlap: true;
   }
 
   [feature = 'aeroway_gate'][zoom >= 17] {

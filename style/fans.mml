@@ -49,7 +49,6 @@ Stylesheet:
   - style/aerialways.mss
   - style/admin.mss
   - style/addressing.mss
-  - style/golf.mss
 Layer:
   - id: landcover-low-zoom
     geometry: polygon
@@ -1033,19 +1032,6 @@ Layer:
     properties:
       cache-features: true
       minzoom: 11
-  - id: golf-line
-    geometry: linestring
-    <<: *extents
-    Datasource:
-      <<: *osm2pgsql
-      table: |-
-        (SELECT
-            way, tags->'golf' AS golf
-          FROM planet_osm_line
-          WHERE tags @> 'golf=>hole'
-        ) AS golf_line
-    properties:
-      minzoom: 16
   - id: necountries
     geometry: linestring
     <<: *extents
@@ -1479,7 +1465,7 @@ Layer:
                 ) AS name,
                 tags->'parking' as "parking",
               COALESCE(
-                'aeroway_' || CASE WHEN aeroway IN ('gate', 'apron', 'helipad', 'aerodrome', 'vordme', 'tacan', 'vortac') THEN aeroway END,
+                'aeroway_' || CASE WHEN aeroway IN ('gate', 'apron', 'helipad', 'aerodrome') THEN aeroway END,
                 'tourism_' || CASE WHEN tourism IN ('alpine_hut', 'apartment', 'artwork', 'camp_site', 'caravan_site', 'chalet', 'gallery', 'guest_house',
                                                     'hostel', 'hotel', 'motel', 'museum', 'picnic_site', 'theme_park', 'wilderness_hut',
                                                     'zoo') THEN tourism END,
@@ -2266,6 +2252,21 @@ Layer:
           FROM planet_osm_line
           WHERE aeroway LIKE 'airway_%'
         ) AS aeroway_line
+    properties:
+      cache-features: true
+      minzoom: 1
+      maxzoom: 13
+  - id: aeroway-point
+    geometry: point
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: |-
+        (SELECT
+            *
+          FROM planet_osm_point
+          WHERE aeroway IN ('tacan', 'vordme', 'vortac', 'fix')
+        ) AS aeroway_point
     properties:
       cache-features: true
       minzoom: 1
