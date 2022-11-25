@@ -72,7 +72,8 @@
 #aeroway-point {
   [aeroway = 'vordme'][zoom >= 1], 
   [aeroway = 'tacan'][zoom >= 1],
-  [aeroway = 'vortac'][zoom >= 1] {
+  [aeroway = 'vortac'][zoom >= 1],
+  [aeroway = 'fix'][zoom >= 1] {
     text-name: "[name]";
     text-size: 20;
     text-wrap-width: @standard-wrap-width;
