@@ -2262,7 +2262,7 @@ Layer:
       <<: *osm2pgsql
       table: |-
         (SELECT
-            way
+            *
           FROM planet_osm_line
           WHERE aeroway LIKE 'airway_%'
         ) AS aeroway_line

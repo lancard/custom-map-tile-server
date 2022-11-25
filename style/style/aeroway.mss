@@ -22,7 +22,6 @@
     }
   }
 
-
   [aeroway = 'airway_conventional'] {
     [zoom >= 1] {
       ::casing[bridge = true][zoom >= 14] {
@@ -68,6 +67,5 @@
       }
     }
   }
-
 }
 
