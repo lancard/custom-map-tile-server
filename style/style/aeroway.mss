@@ -1,5 +1,14 @@
 #aeroway-line {
   [aeroway = 'airway_rnav'] {
+    text-name: "[name]";
+    text-size: 8;
+    text-fill: black;
+    text-spacing: 300;
+    text-clip: false;
+    text-placement: line;
+    text-face-name: @standard-font;
+    text-repeat-distance: 100;
+
     [zoom >= 1] {
       ::casing[bridge = true][zoom >= 14] {
         line-width: 12 + 2*@major-casing-width-z14;
