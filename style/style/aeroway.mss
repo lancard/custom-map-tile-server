@@ -110,6 +110,6 @@
   }
   [aeroway = 'fix'][zoom >= 1] {
     marker-allow-overlap: true;
-    marker-file: url('symbols/aeroway/vortac.svg');
+    marker-file: url('symbols/aeroway/fix.svg');
   }
 }
