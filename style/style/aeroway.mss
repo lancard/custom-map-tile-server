@@ -69,8 +69,8 @@
   }
 
   text-name: "[name]";
-  text-size: 20;
-  text-dy: 20;
+  text-size: 15;
+  text-dy: 10;
   text-fill: blue;
   text-spacing: 300;
   text-clip: false;
