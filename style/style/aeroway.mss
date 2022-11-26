@@ -59,7 +59,7 @@
     line-color: purple;
     line-width: 2;
     line-join: round;
-    text-fill: purle;
+    text-fill: purple;
   }
 
 }
