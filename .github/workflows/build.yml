@@ -23,7 +23,6 @@ jobs:
           repository: lancard/korea-openstreetmap-tiles
           ref: main
           path: tiles
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-node@v3
         with:
