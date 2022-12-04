@@ -25,20 +25,22 @@ jobs:
           path: tiles
           token: ${{ secrets.PAT }}
 
-#      - uses: actions/setup-node@v3
-#        with:
-#          node-version: 16
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
       - name: Build tiles
-        run: date > tiles/nue.txt
-      # - run: ./build/build_tiles.sh
+        run: ./build/build_tiles.sh
+
+      - name: Remove tiles directory
+        run: mv ./build/korea-openstreetmap-tiles/* tiles/
 
       - name: Commit and Push tiles (another repository)
         run: |
           cd tiles
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git config -l
-          git add .
-          git commit -am "upload tiles"
-          git push
+          git status
+#          git add .
+#          git commit -am "upload tiles"
+#          git push
