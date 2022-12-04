@@ -2729,15 +2729,15 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
     }
   }
 
-  [feature = 'aeroway_runway'][zoom >= 11] {
+  [feature = 'aeroway_runway'][zoom >= 1] {
     polygon-fill: @runway-fill;
   }
 
-  [feature = 'aeroway_taxiway'][zoom >= 13] {
+  [feature = 'aeroway_taxiway'][zoom >= 1] {
     polygon-fill: @taxiway-fill;
   }
 
-  [feature = 'aeroway_helipad'][zoom >= 16] {
+  [feature = 'aeroway_helipad'][zoom >= 1] {
     polygon-fill: @helipad-fill;
   }
 }
@@ -2955,8 +2955,8 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
 
 #aeroways {
   [aeroway = 'runway'] {
-    [zoom >= 11] {
-      ::casing[bridge = true][zoom >= 14] {
+    [zoom >= 1] {
+      ::casing[bridge = true][zoom >= 1] {
         line-width: 12 + 2*@major-casing-width-z14;
         line-color: @bridge-casing;
         line-join: round;
@@ -2977,8 +2977,8 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
     }
   }
   [aeroway = 'taxiway'] {
-    [zoom >= 11] {
-      ::casing[bridge = true][zoom >= 14] {
+    [zoom >= 1] {
+      ::casing[bridge = true][zoom >= 1] {
         line-width: 4 + 2*@secondary-casing-width-z14;
         line-color: @bridge-casing;
         line-join: round;
