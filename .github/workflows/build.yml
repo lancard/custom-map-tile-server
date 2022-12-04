@@ -25,7 +25,7 @@ jobs:
           path: tiles
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: Unset some values for another repository
+      - name: Unset some values for another repository
         run: git config -l | grep 'http\..*\.extraheader' | cut -d= -f1 | xargs -L1 git config --unset-all
 
       - uses: actions/setup-node@v3
