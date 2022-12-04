@@ -19,8 +19,4 @@ jobs:
         with:
           node-version: 16
           
-      - run: ls -alhR
-      
-      - run: asfasf
-      
-      - run: node index.js
+      - run: ./build.sh
