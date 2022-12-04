@@ -44,12 +44,15 @@
 
   [aeroway = 'vordme'] {
     marker-file: url('symbols/aeroway/vordme.svg');
+    text-name: "[name]\nASDFASF";
   }
   [aeroway = 'tacan'] {
     marker-file: url('symbols/aeroway/tacan.svg');
+    text-name: "[name]\nASDFASF";
   }
   [aeroway = 'vortac'] {
     marker-file: url('symbols/aeroway/vortac.svg');
+    text-name: "[name]\nASDFASF";
   }
   [aeroway = 'fix'] {
     marker-file: url('symbols/aeroway/fix.svg');
