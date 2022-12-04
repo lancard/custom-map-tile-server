@@ -29,8 +29,6 @@ jobs:
         run: |
           cd tiles
           git config -l
-          find . | grep extraheader
-          ls -alhR .
           git config --unset-all http.https://github.com/.extraheader
           git config -l
 
