@@ -28,7 +28,9 @@ jobs:
       - name: Unset some values for another repository
         run: |
           cd tiles
-          git config -l | grep 'http\..*\.extraheader' | cut -d= -f1 | xargs -L1 git config --unset-all
+          git config -l
+          find . | grep extraheader
+          ls -alhR
 
       - uses: actions/setup-node@v3
         with:
