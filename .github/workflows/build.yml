@@ -23,19 +23,15 @@ jobs:
           repository: lancard/korea-openstreetmap-tiles
           ref: main
           path: tiles
+          token: ${{ secrets.PAT }}
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: 16
 
       - name: Build tiles
         run: date > tiles/nue.txt
       # - run: ./build/build_tiles.sh
-
-      - name: Unset some values for another repository
-        run: |
-          cd tiles
-          git config --unset-all http.https://github.com/.extraheader
 
       - name: Commit and Push tiles (another repository)
         run: |
