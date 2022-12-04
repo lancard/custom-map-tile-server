@@ -14,25 +14,32 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: recursive
+          repository: lancard/custom-map-tile-server
+          refs: main
+          path: build
+
+      - uses: actions/checkout@v3
+        with:
+          repository: lancard/korea-openstreetmap-tiles
+          refs: main
+          path: tiles
       
       - uses: actions/setup-node@v3
         with:
           node-version: 16
       
       - name: Build tiles
-        run: date > korea-openstreetmap-tiles/nue.txt
+        run: date > tiles/nue.txt
       # - run: ./build_tiles.sh
 
       - name: Setup git user
-        run: |
-          cd korea-openstreetmap-tiles
-          git config user.name "$(git --no-pager log --format=format:'%an' -n 1)"
-          git config user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+        run:
+          git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+          git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
 
-      - name: Commit and Push submodules
+      - name: Commit and Push tiles
         run: |
-          cd korea-openstreetmap-tiles
+          cd tiles
           git add . 
           git commit -m "update tiles"
-          git push origin HEAD:refs/heads/main
-          
+          git push
