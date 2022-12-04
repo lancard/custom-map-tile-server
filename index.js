@@ -11,7 +11,7 @@ const latitudeMax = 38.85
 const latitudeMin = 29.85
 const longitudeMax = 132.84627495139412;
 const longitudeMin = 123.56280597193731;
-const timeoutInterval = 10;
+const timeoutInterval = 5;
 
 
 
