@@ -21,6 +21,16 @@ jobs:
       
       - run: date > korea-openstreetmap-tiles/nue.txt
 
+      - name: Setup git user
+        run: |
+          cd korea-openstreetmap-tiles
+          git config user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+          git config user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+
+      - run: |
+          cd korea-openstreetmap-tiles
+          git config
+
       - run: cd korea-openstreetmap-tiles && git add .  && git commit -m "update tiles" && git push origin HEAD:refs/heads/main
 
       # - run: ./build_tiles.sh
