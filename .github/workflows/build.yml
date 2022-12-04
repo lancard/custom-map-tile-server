@@ -18,5 +18,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          
-      - run: ./build.sh
+      
+      - run: date > korea-openstreetmap-tiles/nue.txt
+
+      - run: cd korea-openstreetmap-tiles && git add .  && git commit -m "update tiles" && git push origin HEAD:refs/heads/main
+
+      # - run: ./build_tiles.sh
