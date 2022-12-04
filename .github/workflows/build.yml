@@ -15,19 +15,22 @@ jobs:
         with:
           submodules: recursive
           repository: lancard/custom-map-tile-server
-          refs: main
+          ref: main
           path: build
 
       - uses: actions/checkout@v3
         with:
           repository: lancard/korea-openstreetmap-tiles
-          refs: main
+          ref: main
           path: tiles
       
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      
+
+      - name: Check directory
+        run: ls -alhR .
+
       - name: Build tiles
         run: date > tiles/nue.txt
       # - run: ./build_tiles.sh
