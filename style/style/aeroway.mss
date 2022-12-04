@@ -54,4 +54,7 @@
   [aeroway = 'fix'] {
     marker-file: url('symbols/aeroway/fix.svg');
   }
+  [aeroway = 'ndb'] {
+    marker-file: url('symbols/aeroway/ndb.svg');
+  }
 }
