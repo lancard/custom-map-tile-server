@@ -1,0 +1,3 @@
+[submodule "korea-openstreetmap-tiles"]
+	path = korea-openstreetmap-tiles
+	url = git@github.com:lancard/korea-openstreetmap-tiles.git
