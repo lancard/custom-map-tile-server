@@ -28,22 +28,15 @@ jobs:
         with:
           node-version: 16
 
-      - name: Check directory
-        run: ls -alhR .
-
       - name: Build tiles
         run: date > tiles/nue.txt
       # - run: ./build_tiles.sh
 
-      - name: Setup git user
-        run: |
-          cd build
-          git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
-          git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
-
       - name: Commit and Push tiles
         run: |
           cd tiles
-          git add . 
-          git commit -m "update tiles"
+          git config user.name github-actions
+          git config user.email github-actions@github.com      
+          git add .
+          git commit -am "upload tiles"
           git push
