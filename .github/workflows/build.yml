@@ -30,7 +30,9 @@ jobs:
           node-version: 16
 
       - name: Build tiles
-        run: ./build/build_tiles.sh
+        run: |
+          cd build
+          ./build_tiles.sh
 
       - name: Remove tiles directory
         run: mv ./build/korea-openstreetmap-tiles/* tiles/
