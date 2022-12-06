@@ -1,0 +1,19 @@
+name: build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: remote update
+        run: git submodule update --remote
+
+      - name: git commit and push
+        run: |
+          git add .
+          git commit -m "remote update"
+          git push
