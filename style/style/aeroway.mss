@@ -44,17 +44,21 @@
 
   [vor_type = 'VORDME'] {
     marker-file: url('symbols/aeroway/vordme.svg');
+    text-name: "[name]\n[frequency]";
   }
   [vor_type = 'TACAN'] {
     marker-file: url('symbols/aeroway/tacan.svg');
+    text-name: "[name]\n[frequency]";
   }
   [vor_type = 'VORTAC'] {
     marker-file: url('symbols/aeroway/vortac.svg');
-  }
-  [vor_type = 'FIX'] {
-    marker-file: url('symbols/aeroway/fix.svg');
+    text-name: "[name]\n[frequency]";
   }
   [vor_type = 'NDB'] {
     marker-file: url('symbols/aeroway/ndb.svg');
+    text-name: "[name]\n[frequency]";
+  }
+  [vor_type = 'FIX'] {
+    marker-file: url('symbols/aeroway/fix.svg');
   }
 }
