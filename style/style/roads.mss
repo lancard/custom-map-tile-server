@@ -2978,7 +2978,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
   }
   [aeroway = 'taxiway'] {
     [zoom >= 1] {
-      text-name: "[refs]";
+      text-name: "[ref]";
       text-size: 10;
       text-fill: #333;
       text-spacing: 750;
@@ -2988,7 +2988,7 @@ tertiary is rendered from z10 and is not included in osm_planet_roads. */
       text-halo-radius: @standard-halo-radius;
       text-halo-fill: @standard-halo-fill;
       text-repeat-distance: @minor-highway-text-repeat-distance;
-      
+
       ::casing[bridge = true][zoom >= 1] {
         line-width: 4 + 2*@secondary-casing-width-z14;
         line-color: @bridge-casing;
