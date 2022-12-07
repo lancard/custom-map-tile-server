@@ -1014,25 +1014,6 @@ Layer:
         AS entrances
     properties:
       minzoom: 18
-  - id: aeroways
-    geometry: linestring
-    <<: *extents
-    Datasource:
-      <<: *osm2pgsql
-      table: |-
-        (SELECT
-            way,
-            aeroway,
-            ref,
-            bridge IN ('yes', 'boardwalk', 'cantilever', 'covered', 'low_water_crossing', 'movable', 'trestle', 'viaduct') AS bridge
-          FROM planet_osm_line
-          WHERE aeroway IN ('runway', 'taxiway')
-          ORDER BY bridge NULLS FIRST,
-            CASE WHEN aeroway = 'runway' THEN 1 ELSE 0 END
-        ) AS aeroways
-    properties:
-      cache-features: true
-      minzoom: 11
   - id: necountries
     geometry: linestring
     <<: *extents
@@ -2166,12 +2147,18 @@ Layer:
       cache-features: true
       minzoom: 1
   - id: airport-line
-    geometry: point
+    geometry: linestring
     <<: *extents
     Datasource:
       <<: *osm2pgsql
       table: |-
-        (SELECT * FROM navaid) AS aeroway_point
+        (SELECT
+            way,
+            aeroway,
+            ref
+          FROM planet_osm_line
+          WHERE aeroway IN ('runway', 'taxiway', 'parking_position')
+        ) AS aeroways
     properties:
       cache-features: true
-      minzoom: 1
+      minzoom: 5
