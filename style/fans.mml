@@ -2150,11 +2150,7 @@ Layer:
     Datasource:
       <<: *osm2pgsql
       table: |-
-        (SELECT
-            *
-          FROM planet_osm_line
-          WHERE aeroway LIKE 'airway_%'
-        ) AS aeroway_line
+        (SELECT * FROM airway) AS aeroway_line
     properties:
       cache-features: true
       minzoom: 1
@@ -2164,11 +2160,7 @@ Layer:
     Datasource:
       <<: *osm2pgsql
       table: |-
-        (SELECT
-            *
-          FROM planet_osm_point
-          WHERE aeroway IN ('tacan', 'vordme', 'vortac', 'fix', 'ndb')
-        ) AS aeroway_point
+        (SELECT * FROM navaid) AS aeroway_point
     properties:
       cache-features: true
       minzoom: 1

@@ -12,17 +12,17 @@
   line-width: 2;
   line-join: round;
 
-  [aeroway = 'airway_rnav'] {
+  [airway_type = 'RNAV'] {
     text-fill: blue;
     line-color: blue;
   }
 
-  [aeroway = 'airway_conventional'] {
+  [airway_type = 'CONVENTIONAL'] {
     text-fill: black;
     line-color: black;
   }
 
-  [aeroway = 'airway_vfr'] {
+  [airway_type = 'VFR'] {
     text-fill: purple;
     line-color: purple;
   }
@@ -42,19 +42,19 @@
 
   marker-allow-overlap: true;
 
-  [aeroway = 'vordme'] {
+  [vor_type = 'VORDME'] {
     marker-file: url('symbols/aeroway/vordme.svg');
   }
-  [aeroway = 'tacan'] {
+  [vor_type = 'TACAN'] {
     marker-file: url('symbols/aeroway/tacan.svg');
   }
-  [aeroway = 'vortac'] {
+  [vor_type = 'VORTAC'] {
     marker-file: url('symbols/aeroway/vortac.svg');
   }
-  [aeroway = 'fix'] {
+  [vor_type = 'FIX'] {
     marker-file: url('symbols/aeroway/fix.svg');
   }
-  [aeroway = 'ndb'] {
+  [vor_type = 'NDB'] {
     marker-file: url('symbols/aeroway/ndb.svg');
   }
 }
