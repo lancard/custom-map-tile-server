@@ -58,7 +58,7 @@
     marker-file: url('symbols/aeroway/ndb.svg');
     text-name: [name] + "\n" + [frequency];
   }
-  [vor_type = 'FIX'] {
+  [navaid_type = 'FIX'] {
     marker-file: url('symbols/aeroway/fix.svg');
   }
 }
