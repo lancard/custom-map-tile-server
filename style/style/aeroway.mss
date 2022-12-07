@@ -62,3 +62,7 @@
     marker-file: url('symbols/aeroway/fix.svg');
   }
 }
+
+#airport-line {
+  
+}

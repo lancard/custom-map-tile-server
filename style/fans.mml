@@ -1023,6 +1023,7 @@ Layer:
         (SELECT
             way,
             aeroway,
+            ref,
             bridge IN ('yes', 'boardwalk', 'cantilever', 'covered', 'low_water_crossing', 'movable', 'trestle', 'viaduct') AS bridge
           FROM planet_osm_line
           WHERE aeroway IN ('runway', 'taxiway')
@@ -2155,6 +2156,16 @@ Layer:
       cache-features: true
       minzoom: 1
   - id: aeroway-point
+    geometry: point
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: |-
+        (SELECT * FROM navaid) AS aeroway_point
+    properties:
+      cache-features: true
+      minzoom: 1
+  - id: airport-line
     geometry: point
     <<: *extents
     Datasource:
