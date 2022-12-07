@@ -66,15 +66,6 @@
 #airport-line {
   [aeroway = 'runway'] {
     [zoom >= 1] {
-      ::casing[bridge = true][zoom >= 1] {
-        line-width: 12 + 2*@major-casing-width-z14;
-        line-color: @bridge-casing;
-        line-join: round;
-        [zoom >= 15] { line-width: 18 + 2*@major-casing-width-z15; }
-        [zoom >= 16] { line-width: 24 + 2*@major-casing-width-z16; }
-        [zoom >= 17] { line-width: 24 + 2*@major-casing-width-z17; }
-        [zoom >= 18] { line-width: 24 + 2*@major-casing-width-z18; }
-      }
       ::fill {
         line-color: @runway-fill;
         line-width: 2;
@@ -84,7 +75,7 @@
         [zoom >= 15] { line-width: 18; }
         [zoom >= 16] { line-width: 24; }
       }
-      
+
       text-name: "[ref]";
       text-size: 14;
       text-fill: blue;
@@ -99,15 +90,6 @@
   }
   [aeroway = 'taxiway'] {
     [zoom >= 1] {
-      ::casing[bridge = true][zoom >= 1] {
-        line-width: 4 + 2*@secondary-casing-width-z14;
-        line-color: @bridge-casing;
-        line-join: round;
-        [zoom >= 15] { line-width: 6 + 2*@secondary-casing-width-z15; }
-        [zoom >= 16] { line-width: 8 + 2*@secondary-casing-width-z16; }
-        [zoom >= 17] { line-width: 8 + 2*@secondary-casing-width-z17; }
-        [zoom >= 18] { line-width: 8 + 2*@secondary-casing-width-z18; }
-      }
       ::fill {
         line-color: @taxiway-fill ;
         line-width: 1;
