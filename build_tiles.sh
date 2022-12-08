@@ -9,3 +9,7 @@ git add .
 git commit -m "update tiles"
 git push origin HEAD:main
 cd ..
+git submodule update --remote
+git add korea-openstreetmap-tiles
+git commit -m "update tiles"
+git push
