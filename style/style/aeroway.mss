@@ -1,3 +1,53 @@
+#airport-line {
+  [aeroway = 'runway'] {
+    [zoom >= 1] {
+      ::fill {
+        line-color: @runway-fill;
+        line-width: 2;
+        [zoom >= 12] { line-width: 4; }
+        [zoom >= 13] { line-width: 6; }
+        [zoom >= 14] { line-width: 12; }
+        [zoom >= 15] { line-width: 18; }
+        [zoom >= 16] { line-width: 24; }
+      }
+
+      text-name: "[ref]";
+      text-size: 14;
+      text-fill: blue;
+      text-spacing: 750;
+      text-clip: false;
+      text-placement: line;
+      text-face-name: @oblique-fonts;
+      text-halo-radius: @standard-halo-radius;
+      text-halo-fill: @standard-halo-fill;
+      text-repeat-distance: @minor-highway-text-repeat-distance;
+    }
+  }
+  [aeroway = 'taxiway'] {
+    [zoom >= 1] {
+      ::fill {
+        line-color: @taxiway-fill ;
+        line-width: 1;
+        [zoom >= 13] { line-width: 2; }
+        [zoom >= 14] { line-width: 4; }
+        [zoom >= 15] { line-width: 6; }
+        [zoom >= 16] { line-width: 8; }
+      }
+
+      text-name: "[ref]";
+      text-size: 10;
+      text-fill: #333;
+      text-spacing: 750;
+      text-clip: false;
+      text-placement: line;
+      text-face-name: @oblique-fonts;
+      text-halo-radius: @standard-halo-radius;
+      text-halo-fill: @standard-halo-fill;
+      text-repeat-distance: @minor-highway-text-repeat-distance;
+    }
+  }
+}
+
 #aeroway-line {
   text-name: "[name]";
   text-size: 15;
@@ -63,52 +113,3 @@
   }
 }
 
-#airport-line {
-  [aeroway = 'runway'] {
-    [zoom >= 1] {
-      ::fill {
-        line-color: @runway-fill;
-        line-width: 2;
-        [zoom >= 12] { line-width: 4; }
-        [zoom >= 13] { line-width: 6; }
-        [zoom >= 14] { line-width: 12; }
-        [zoom >= 15] { line-width: 18; }
-        [zoom >= 16] { line-width: 24; }
-      }
-
-      text-name: "[ref]";
-      text-size: 14;
-      text-fill: blue;
-      text-spacing: 750;
-      text-clip: false;
-      text-placement: line;
-      text-face-name: @oblique-fonts;
-      text-halo-radius: @standard-halo-radius;
-      text-halo-fill: @standard-halo-fill;
-      text-repeat-distance: @minor-highway-text-repeat-distance;
-    }
-  }
-  [aeroway = 'taxiway'] {
-    [zoom >= 1] {
-      ::fill {
-        line-color: @taxiway-fill ;
-        line-width: 1;
-        [zoom >= 13] { line-width: 2; }
-        [zoom >= 14] { line-width: 4; }
-        [zoom >= 15] { line-width: 6; }
-        [zoom >= 16] { line-width: 8; }
-      }
-
-      text-name: "[ref]";
-      text-size: 10;
-      text-fill: #333;
-      text-spacing: 750;
-      text-clip: false;
-      text-placement: line;
-      text-face-name: @oblique-fonts;
-      text-halo-radius: @standard-halo-radius;
-      text-halo-fill: @standard-halo-fill;
-      text-repeat-distance: @minor-highway-text-repeat-distance;
-    }
-  }
-}

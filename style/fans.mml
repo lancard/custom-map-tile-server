@@ -2126,6 +2126,26 @@ Layer:
       table: *amenity_low_priority_sql
     properties:
       minzoom: 17
+
+
+
+# custom aviation --------------------------------------------------------------------------------------------------------------------------------
+  - id: airport-line
+    geometry: linestring
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: |-
+        (SELECT
+            way,
+            aeroway,
+            ref
+          FROM planet_osm_line
+          WHERE aeroway IN ('runway', 'taxiway', 'parking_position')
+        ) AS aeroways
+    properties:
+      cache-features: true
+      minzoom: 5
   - id: aeroway-line
     geometry: linestring
     <<: *extents
@@ -2146,19 +2166,3 @@ Layer:
     properties:
       cache-features: true
       minzoom: 1
-  - id: airport-line
-    geometry: linestring
-    <<: *extents
-    Datasource:
-      <<: *osm2pgsql
-      table: |-
-        (SELECT
-            way,
-            aeroway,
-            ref
-          FROM planet_osm_line
-          WHERE aeroway IN ('runway', 'taxiway', 'parking_position')
-        ) AS aeroways
-    properties:
-      cache-features: true
-      minzoom: 5
