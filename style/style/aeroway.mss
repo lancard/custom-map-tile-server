@@ -160,5 +160,13 @@
   [navaid_type = 'FIX'][extra_type = 'FIX'] {
     marker-file: url('symbols/aeroway/fix.svg');
   }
+  [navaid_type = 'FIX'][extra_type = 'NEAR_AIRPORT_FIX'] {
+    marker-file: url('symbols/aeroway/fix.svg');
+    [zoom >= 8] {
+      marker-width: 7;
+      marker-height: 7;
+      text-size: 8;
+    }
+  }
 }
 
