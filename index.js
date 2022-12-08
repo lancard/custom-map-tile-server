@@ -47,8 +47,6 @@ for (let z = zoomMin; z <= zoomWhole; z++) {
 	}
 }
 
-return;
-
 for (let z = zoomWhole + 1; z <= zoomMax; z++) {
 	const ystart = latitudeToY(latitudeMax, z);
 	const yend = latitudeToY(latitudeMin, z);
