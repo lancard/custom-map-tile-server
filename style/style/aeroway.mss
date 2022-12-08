@@ -80,45 +80,58 @@
 
 #aeroway-point {
   text-name: "[name]";
-  text-size: 15;
+  text-size: 0;
   text-wrap-width: @standard-wrap-width;
   text-line-spacing: @standard-line-spacing-size;
   text-fill: black;
   text-face-name: @standard-font;
   text-halo-radius: @standard-halo-radius;
   text-halo-fill: @standard-halo-fill;
-  text-dy: 10;
   text-allow-overlap: true;
 
   marker-allow-overlap: true;
 
-  [zoom = 7] {
+  [zoom <= 7] {
     marker-width: 6;
     marker-height: 6;
+    text-size: 0;
+    text-dy: 10;
   }
   [zoom = 8] {
     marker-width: 7;
     marker-height: 7;
+    text-size: 8;
+    text-dy: 10;
   }
   [zoom = 9] {
     marker-width: 8;
     marker-height: 8;
+    text-size: 9;
+    text-dy: 10;
   }
   [zoom = 10] {
     marker-width: 9;
     marker-height: 9;
+    text-size: 10;
+    text-dy: 10;
   }
   [zoom = 11] {
     marker-width: 10;
     marker-height: 10;
+    text-size: 11;
+    text-dy: 10;
   }
   [zoom = 12] {
     marker-width: 11;
     marker-height: 11;
+    text-size: 12;
+    text-dy: 10;
   }
   [zoom = 13] {
     marker-width: 12;
     marker-height: 12;
+    text-size: 13;
+    text-dy: 10;
   }
 
 
@@ -139,7 +152,6 @@
     text-name: [name] + "\n" + [frequency];
   }
   [navaid_type = 'NDB'][extra_type = 'VFR-Reporting-Point'] {
-    text-size: 8;
     text-fill: purple;
   }
   [navaid_type = 'FIX'][extra_type = 'FIX'] {
