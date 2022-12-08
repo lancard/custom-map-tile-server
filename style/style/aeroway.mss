@@ -158,7 +158,7 @@
     marker-file: none;
     text-fill: purple;
   }
-  [navaid_type = 'FIX'][extra_type = 'FIX'][] {
+  [navaid_type = 'FIX'][extra_type = 'FIX'] {
     marker-file: url('symbols/aeroway/fix.svg');
   }
 }
