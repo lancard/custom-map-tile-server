@@ -104,11 +104,15 @@
     marker-file: url('symbols/aeroway/vortac.svg');
     text-name: [name] + "\n" + [frequency];
   }
-  [vor_type = 'NDB'] {
+  [navaid_type = 'NDB'][extra_type != 'VFR-Reporting-Point'] {
     marker-file: url('symbols/aeroway/ndb.svg');
     text-name: [name] + "\n" + [frequency];
   }
-  [navaid_type = 'FIX'] {
+  [navaid_type = 'NDB'][extra_type = 'VFR-Reporting-Point'] {
+    text-size: 8;
+    text-fill: purple;
+  }
+  [navaid_type = 'FIX'][extra_type = 'FIX'] {
     marker-file: url('symbols/aeroway/fix.svg');
   }
 }
