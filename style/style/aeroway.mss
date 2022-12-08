@@ -147,15 +147,14 @@
     marker-file: url('symbols/aeroway/vortac.svg');
     text-name: [name] + "\n" + [frequency];
   }
-  [navaid_type = 'NDB'] {
+  [navaid_type = 'NDB'][extra_type != 'CUSTOM_FIX'][extra_type != 'VFR-Reporting-Point'] {
     marker-file: url('symbols/aeroway/ndb.svg');
     text-name: [name] + "\n" + [frequency];
   }
   [navaid_type = 'NDB'][extra_type = 'CUSTOM_FIX'] {
-    marker-file: none;
+    marker-file: url('symbols/aeroway/fix.svg');
   }
   [navaid_type = 'NDB'][extra_type = 'VFR-Reporting-Point'] {
-    marker-file: none;
     text-fill: purple;
   }
   [navaid_type = 'FIX'][extra_type = 'FIX'] {
