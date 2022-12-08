@@ -6,6 +6,7 @@ gracefulFs.gracefulify(fs);
 
 // config
 const zoomMin = 0; // 0
+const zoomWhole = 7; // until 7 level, download whole world
 const zoomMax = 13; // final 13
 const latitudeMax = 38.85
 const latitudeMin = 29.85
@@ -35,7 +36,20 @@ function download(x, y, z) {
 
 let timeout = 0;
 
-for (let z = zoomMin; z <= zoomMax; z++) {
+for (let z = zoomMin; z <= zoomWhole; z++) {
+	const maxIndex = Math.pow(2, z);
+
+	for (let y = 0; y < maxIndex; y++) {
+		for (let x = 0; x < maxIndex; x++) {
+			setTimeout(() => { console.log(x, y, z); download(x, y, z) }, timeout);
+			timeout += timeoutInterval;
+		}
+	}
+}
+
+return;
+
+for (let z = zoomWhole + 1; z <= zoomMax; z++) {
 	const ystart = latitudeToY(latitudeMax, z);
 	const yend = latitudeToY(latitudeMin, z);
 
