@@ -155,7 +155,13 @@
     marker-file: url('symbols/aeroway/fix.svg');
   }
   [navaid_type = 'NDB'][extra_type = 'VFR-Reporting-Point'] {
+    marker-fill: purple;
     text-fill: purple;
+    [zoom >= 8] {
+      marker-width: 7;
+      marker-height: 7;
+      text-size: 8;
+    }
   }
   [navaid_type = 'FIX'][extra_type = 'FIX'] {
     marker-file: url('symbols/aeroway/fix.svg');
