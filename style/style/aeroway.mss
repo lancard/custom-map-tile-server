@@ -91,8 +91,36 @@
   text-allow-overlap: true;
 
   marker-allow-overlap: true;
-  marker-width: @zoom + 6;
-  marker-height: @zoom + 6;
+
+  [zoom = 7] {
+    marker-width: 6;
+    marker-height: 6;
+  }
+  [zoom = 8] {
+    marker-width: 7;
+    marker-height: 7;
+  }
+  [zoom = 9] {
+    marker-width: 8;
+    marker-height: 8;
+  }
+  [zoom = 10] {
+    marker-width: 9;
+    marker-height: 9;
+  }
+  [zoom = 11] {
+    marker-width: 10;
+    marker-height: 10;
+  }
+  [zoom = 12] {
+    marker-width: 11;
+    marker-height: 11;
+  }
+  [zoom = 13] {
+    marker-width: 12;
+    marker-height: 12;
+  }
+
 
   [vor_type = 'VORDME'] {
     marker-file: url('symbols/aeroway/vordme.svg');
