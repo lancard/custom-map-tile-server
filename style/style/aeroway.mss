@@ -91,8 +91,8 @@
   text-allow-overlap: true;
 
   marker-allow-overlap: true;
-  marker-width: 6 + @zoom;
-  marker-height: 4 + @zoom;
+  marker-width: @zoom + 6;
+  marker-height: @zoom + 6;
 
   [vor_type = 'VORDME'] {
     marker-file: url('symbols/aeroway/vordme.svg');
