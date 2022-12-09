@@ -166,6 +166,9 @@
   [navaid_type = 'FIX'][extra_type = 'FIX'] {
     marker-file: url('symbols/aeroway/fix.svg');
   }
+  [navaid_type = 'FIX'][extra_type = 'ILS'] {
+    text-name: [name] + "\n" + [frequency];
+  }
   [navaid_type = 'FIX'][extra_type = 'NEAR_AIRPORT_FIX'] {
     marker-file: url('symbols/aeroway/fix.svg');
     [zoom >= 8] {
