@@ -52,7 +52,7 @@
   text-name: "[name]";
   text-size: 15;
   text-dy: 7;
-  text-fill: blue;
+  text-fill: #727285;
   text-spacing: 300;
   text-clip: false;
   text-placement: line;
@@ -63,8 +63,8 @@
   line-join: round;
 
   [airway_type = 'RNAV'] {
-    text-fill: blue;
-    line-color: blue;
+    text-fill: #727285;
+    line-color: #727285;
   }
 
   [airway_type = 'CONVENTIONAL'] {
