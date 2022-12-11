@@ -50,9 +50,9 @@
 
 #aeroway-line[airway_type = 'VFR'][zoom > 8] {
   text-name: "[name]";
-  text-size: 15;
-  text-dy: 7;
-  text-fill: #727285;
+  text-size: 10;
+  text-dy: 5;
+  text-fill: #AAC7AA;
   text-spacing: 300;
   text-clip: false;
   text-placement: line;
