@@ -48,7 +48,7 @@
   }
 }
 
-#aeroway-line {
+#aeroway-line[airway_type = 'VFR'][zoom > 8] {
   text-name: "[name]";
   text-size: 15;
   text-dy: 7;
@@ -62,38 +62,52 @@
   line-width: 2;
   line-join: round;
 
-  [airway_type = 'RNAV'] {
-    text-fill: #727285;
-    ::case {
-      line-width: 4;
-      line-color: #727285;
-    }
-    ::fill {
-      line-width: 2;
-      line-color: #727285;
-      line-opacity: 0.5;
-    }
-  }
+  text-fill: #847A71;
+  line-color: #847A71;
+}
 
-  [airway_type = 'CONVENTIONAL'] {
-    text-fill: #847A71;
-    line-color: #847A71;
-  }
+#aeroway-line[airway_type = 'RNAV'] {
+  text-name: "[name]";
+  text-size: 15;
+  text-dy: 7;
+  text-fill: #727285;
+  text-spacing: 300;
+  text-clip: false;
+  text-placement: line;
+  text-face-name: @standard-font;
+  text-repeat-distance: 10;
 
-  [airway_type = 'VFR'][zoom <= 7] {
-    [zoom <= 7] {
-      text-fill: #AAC7AA;
-      text-opacity: 0;
-      line-color: #AAC7AA;
-      line-opacity: 0;
-    }
-    [zoom > 8] {
-      text-fill: #AAC7AA;
-      text-opacity: 1;
-      line-color: #AAC7AA;
-      line-opacity: 1;
-    }
+  line-width: 2;
+  line-join: round;
+
+  text-fill: #727285;
+  ::case {
+    line-width: 4;
+    line-color: #727285;
   }
+  ::fill {
+    line-width: 2;
+    line-color: #727285;
+    line-opacity: 0.5;
+  }
+}
+
+#aeroway-line[airway_type = 'CONVENTIONAL'] {
+  text-name: "[name]";
+  text-size: 15;
+  text-dy: 7;
+  text-fill: #727285;
+  text-spacing: 300;
+  text-clip: false;
+  text-placement: line;
+  text-face-name: @standard-font;
+  text-repeat-distance: 10;
+
+  line-width: 2;
+  line-join: round;
+
+  text-fill: #847A71;
+  line-color: #847A71;
 }
 
 #aeroway-point {
