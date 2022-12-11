@@ -73,8 +73,8 @@
   }
 
   [airway_type = 'VFR'] {
-    text-fill: purple;
-    line-color: purple;
+    text-fill: #DBEBC4;
+    line-color: #DBEBC4;
   }
 }
 
@@ -155,8 +155,8 @@
     marker-file: url('symbols/aeroway/fix.svg');
   }
   [navaid_type = 'NDB'][extra_type != 'NDB'][extra_type != 'CUSTOM_FIX'] {
-    marker-fill: purple;
-    text-fill: purple;
+    marker-fill: #DBEBC4;
+    text-fill: #DBEBC4;
     [zoom >= 8] {
       marker-width: 7;
       marker-height: 7;
