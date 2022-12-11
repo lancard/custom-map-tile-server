@@ -62,8 +62,8 @@
   line-width: 2;
   line-join: round;
 
-  text-fill: #847A71;
-  line-color: #847A71;
+  text-fill: #AAC7AA;
+  line-color: #AAC7AA;
 }
 
 #aeroway-line[airway_type = 'RNAV'] {
@@ -110,7 +110,7 @@
   line-color: #847A71;
 }
 
-#aeroway-point {
+#aeroway-point[zoom > 8] {
   text-name: "[name]";
   text-size: 0;
   text-wrap-width: @standard-wrap-width;
