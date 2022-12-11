@@ -156,7 +156,7 @@
   }
   [navaid_type = 'NDB'][extra_type != 'NDB'][extra_type != 'CUSTOM_FIX'] {
     marker-fill: #AAC7AA;
-    text-fill: #AAC7AA;
+    text-fill: #667866;
     [zoom >= 8] {
       marker-width: 7;
       marker-height: 7;
@@ -167,6 +167,7 @@
     marker-file: url('symbols/aeroway/fix.svg');
   }
   [navaid_type = 'FIX'][extra_type = 'ILS'] {
+    marker-fill: #CFAACA;
     text-name: [name] + "\n" + [frequency];
   }
   [navaid_type = 'FIX'][extra_type = 'NEAR_AIRPORT_FIX'] {
