@@ -68,8 +68,8 @@
   }
 
   [airway_type = 'CONVENTIONAL'] {
-    text-fill: black;
-    line-color: black;
+    text-fill: #847A71;
+    line-color: #847A71;
   }
 
   [airway_type = 'VFR'] {
@@ -83,7 +83,7 @@
   text-size: 0;
   text-wrap-width: @standard-wrap-width;
   text-line-spacing: @standard-line-spacing-size;
-  text-fill: black;
+  text-fill: #847A71;
   text-face-name: @standard-font;
   text-halo-radius: @standard-halo-radius;
   text-halo-fill: @standard-halo-fill;
