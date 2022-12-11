@@ -65,6 +65,11 @@
   [airway_type = 'RNAV'] {
     text-fill: #727285;
     line-color: #727285;
+    line-width: 4;
+    ::hatch {
+      line-width: 6;
+      line-dasharray: 1, 2;
+    }
   }
 
   [airway_type = 'CONVENTIONAL'] {
