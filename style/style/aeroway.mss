@@ -64,10 +64,14 @@
 
   [airway_type = 'RNAV'] {
     text-fill: #727285;
-    line-opacity: 1;
     ::case {
       line-width: 4;
       line-color: #727285;
+    }
+    ::fill {
+      line-width: 2;
+      line-color: #727285;
+      line-opacity: 0.5;
     }
   }
 
@@ -76,9 +80,19 @@
     line-color: #847A71;
   }
 
-  [airway_type = 'VFR'] {
-    text-fill: #AAC7AA;
-    line-color: #AAC7AA;
+  [airway_type = 'VFR'][zoom <= 7] {
+    [zoom <= 7] {
+      text-fill: #AAC7AA;
+      text-opacity: 0;
+      line-color: #AAC7AA;
+      line-opacity: 0;
+    }
+    [zoom > 8] {
+      text-fill: #AAC7AA;
+      text-opacity: 1;
+      line-color: #AAC7AA;
+      line-opacity: 1;
+    }
   }
 }
 
