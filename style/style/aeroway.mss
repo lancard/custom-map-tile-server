@@ -176,6 +176,9 @@
     text-name: [name] + "\n" + [frequency];
   }
   [vor_type = 'VORTAC'] {
+    marker-width: 12;
+    marker-height: 12;
+    marker-opacity: 0;
     marker-file: url('symbols/aeroway/vortac.svg');
     text-name: [name] + "\n" + [frequency];
   }
