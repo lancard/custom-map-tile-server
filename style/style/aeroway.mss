@@ -64,7 +64,7 @@
 
   [airway_type = 'RNAV'] {
     text-fill: #727285;
-    line-opacity: 0;
+    line-opacity: 1;
     ::case {
       line-width: 4;
       line-color: #727285;
