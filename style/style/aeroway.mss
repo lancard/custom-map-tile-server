@@ -240,7 +240,7 @@
     }
   }
 
-  [airway_count > 0] {
+  [navaid_type != 'VFR_REPORTING_POINT'][airway_count > 0] {
     marker-width: 20;
     marker-height: 20;
     marker-fill: blue;
