@@ -113,17 +113,6 @@
 
   line-width: 2;
   line-join: round;
-
-  text-fill: #8461C4;
-  ::case {
-    line-width: 4;
-    line-color: #8461C4;
-  }
-  ::fill {
-    line-width: 2;
-    line-color: #8461C4;
-    line-opacity: 0.5;
-  }
 }
 
 #aeroway-line[airway_type = 'CONVENTIONAL'] {
