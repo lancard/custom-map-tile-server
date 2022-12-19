@@ -285,7 +285,7 @@
 
 @mini-roundabout-width:           4;
 
-@junction-text-color:             #960000;
+@junction-text-color:             #777777;
 @halo-color-for-minor-road:       white;
 @lowzoom-halo-color:              white;
 @lowzoom-halo-width:              1;
