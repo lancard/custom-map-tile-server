@@ -211,6 +211,7 @@
   [vor_type = 'VORTAC'] {
     marker-width: 20;
     marker-height: 20;
+    marker-fill: red;
     marker-file: url('symbols/aeroway/vortac.svg');
     text-name: [name] + "\n" + [frequency];
   }
