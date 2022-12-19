@@ -2136,7 +2136,10 @@ Layer:
     Datasource:
       <<: *osm2pgsql
       table: |-
-        (select way, name, round((tags->'ele')::numeric * 3.28084) as elevation from planet_osm_point where "natural" ='peak' and name is not null and tags->'ele' ~ '^[0-9]+$' and (tags->'ele')::NUMERIC > 200) AS terain_mountain
+        (select way, name, round((tags->'ele')::numeric * 3.28084) as elevation
+          from planet_osm_point where "natural" ='peak' and name is not null and tags->'ele' ~ '^[0-9]+$' and (tags->'ele')::NUMERIC > 200
+          order by (tags->'ele')::numeric DESC
+        ) AS terain_mountain
     properties:
       cache-features: true
       minzoom: 1
