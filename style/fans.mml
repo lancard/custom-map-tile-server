@@ -1447,7 +1447,7 @@ Layer:
                 ) AS name,
                 tags->'parking' as "parking",
               COALESCE(
-                'aeroway_' || CASE WHEN aeroway IN ('gate', 'apron', 'helipad', 'aerodrome') THEN aeroway END,
+                'aeroway_' || CASE WHEN aeroway IN ('gate', 'apron', 'aerodrome') THEN aeroway END,
                 'tourism_' || CASE WHEN tourism IN ('alpine_hut', 'apartment', 'artwork', 'camp_site', 'caravan_site', 'chalet', 'gallery', 'guest_house',
                                                     'hostel', 'hotel', 'motel', 'museum', 'picnic_site', 'theme_park', 'wilderness_hut',
                                                     'zoo') THEN tourism END,
@@ -2159,6 +2159,16 @@ Layer:
     properties:
       cache-features: true
       minzoom: 5
+  - id: airport-helipad
+    geometry: point
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: |-
+        (select way, name from planet_osm_point where aeroway = 'helipad') AS airport_helipad
+    properties:
+      cache-features: true
+      minzoom: 1      
   - id: aeroway-line
     geometry: linestring
     <<: *extents

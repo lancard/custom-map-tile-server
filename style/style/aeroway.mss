@@ -64,6 +64,26 @@
   }
 }
 
+#airport-helipad {
+  [zoom >= 11] {
+    marker-file: url('symbols/helipad.16.svg');
+    marker-clip: false;
+    marker-fill: @airtransport;
+  }
+
+  [zoom >= 13] {
+    text-name: "[name]";
+    text-size: @standard-font-size;
+    text-wrap-width: @standard-wrap-width;
+    text-line-spacing: @standard-line-spacing-size;
+    text-fill: @airtransport;
+    text-dy: -10;
+    text-face-name: @standard-font;
+    text-halo-radius: @standard-halo-radius;
+    text-halo-fill: @standard-halo-fill;
+  }
+}
+
 #aeroway-line[airway_type = 'VFR'][zoom > 8] {
   text-name: "[name]";
   text-size: 10;

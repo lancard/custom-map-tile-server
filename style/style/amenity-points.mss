@@ -1328,12 +1328,6 @@
     marker-clip: false;
   }
 
-  [feature = 'aeroway_helipad'][zoom >= 1] {
-    marker-file: url('symbols/helipad.16.svg');
-    marker-clip: false;
-    marker-fill: @airtransport;
-  }
-
   [feature = 'aeroway_aerodrome']['access' != 'private']['icao' != null]['iata' != null][zoom >= 10][zoom < 17],
   [feature = 'aeroway_aerodrome']['access' = 'private'][zoom >= 12][zoom < 18],
   [feature = 'aeroway_aerodrome']['icao' = null][zoom >= 12][zoom < 18],
@@ -2834,18 +2828,6 @@
       text-halo-radius: @standard-halo-radius;
       text-halo-fill: @standard-halo-fill;
     }
-  }
-
-  [feature = 'aeroway_helipad'][zoom >= 16] {
-    text-name: "[name]";
-    text-size: @standard-font-size;
-    text-wrap-width: @standard-wrap-width;
-    text-line-spacing: @standard-line-spacing-size;
-    text-fill: @airtransport;
-    text-dy: -10;
-    text-face-name: @standard-font;
-    text-halo-radius: @standard-halo-radius;
-    text-halo-fill: @standard-halo-fill;
   }
 
   [feature = 'aeroway_aerodrome']['access' != 'private']['icao' != null]['iata' != null][zoom >= 11][zoom < 17],
