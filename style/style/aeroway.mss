@@ -211,9 +211,10 @@
   [vor_type = 'VORTAC'] {
     marker-width: 20;
     marker-height: 20;
-    marker-fill: red;
+    marker-fill: blue;
     marker-file: url('symbols/aeroway/vortac.svg');
     text-name: [name] + "\n" + [frequency];
+    text-fill: blue;
   }
   [navaid_type = 'NDB'] {
     marker-file: url('symbols/aeroway/ndb.svg');
