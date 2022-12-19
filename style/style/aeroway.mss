@@ -68,11 +68,11 @@
   marker-file: url('symbols/helipad.16.svg');
   marker-clip: false;
   marker-fill: #8461C4;
-  marker-width: 7;
-  marker-height: 7;
+  marker-width: 9;
+  marker-height: 9;
 
   text-name: "[name]";
-  text-size: @standard-font-size;
+  text-size: 9;
   text-wrap-width: @standard-wrap-width;
   text-line-spacing: @standard-line-spacing-size;
   text-fill: #8461C4;
@@ -83,11 +83,10 @@
   text-allow-overlap: true;
 }
 
-#aeroway-line[airway_type = 'VFR'][zoom > 8] {
+#aeroway-line[airway_type = 'VFR'][zoom > 9] {
   text-name: "[name]";
   text-size: 10;
   text-dy: 5;
-  text-fill: #AAC7AA;
   text-spacing: 300;
   text-clip: false;
   text-placement: line;
@@ -97,8 +96,8 @@
   line-width: 2;
   line-join: round;
 
-  text-fill: #AAC7AA;
-  line-color: #AAC7AA;
+  text-fill: #738773;
+  line-color: #738773;
 }
 
 #aeroway-line[airway_type = 'RNAV'] {
@@ -131,7 +130,6 @@
   text-name: "[name]";
   text-size: 15;
   text-dy: 7;
-  text-fill: #727285;
   text-spacing: 300;
   text-clip: false;
   text-placement: line;
@@ -141,8 +139,8 @@
   line-width: 2;
   line-join: round;
 
-  text-fill: #847A71;
-  line-color: #847A71;
+  text-fill: #CC8181;
+  line-color: #CC8181;
 }
 
 #aeroway-point[zoom > 8] {
