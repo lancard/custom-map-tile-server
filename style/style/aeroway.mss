@@ -244,7 +244,7 @@
     marker-width: 20;
     marker-height: 20;
     marker-fill: blue;
-    marker-line-ocolor: blue;
+    marker-line-color: blue;
     text-fill: blue;
   }
 }
