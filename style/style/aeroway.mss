@@ -78,6 +78,7 @@
   text-face-name: @standard-font;
   text-halo-radius: @standard-halo-radius;
   text-halo-fill: @standard-halo-fill;
+  text-allow-overlap: true;
 }
 
 #aeroway-line[airway_type = 'VFR'][zoom > 8] {
