@@ -67,13 +67,13 @@
 #airport-helipad[zoom >= 11] {
   marker-file: url('symbols/helipad.16.svg');
   marker-clip: false;
-  marker-fill: @airtransport;
+  marker-fill: #8461C4;
 
   text-name: "[name]";
   text-size: @standard-font-size;
   text-wrap-width: @standard-wrap-width;
   text-line-spacing: @standard-line-spacing-size;
-  text-fill: @airtransport;
+  text-fill: #8461C4;
   text-dy: 7;
   text-face-name: @standard-font;
   text-halo-radius: @standard-halo-radius;
@@ -103,7 +103,7 @@
   text-name: "[name]";
   text-size: 15;
   text-dy: 7;
-  text-fill: #727285;
+  text-fill: #8461C4;
   text-spacing: 300;
   text-clip: false;
   text-placement: line;
@@ -113,14 +113,14 @@
   line-width: 2;
   line-join: round;
 
-  text-fill: #727285;
+  text-fill: #8461C4;
   ::case {
     line-width: 4;
-    line-color: #727285;
+    line-color: #8461C4;
   }
   ::fill {
     line-width: 2;
-    line-color: #727285;
+    line-color: #8461C4;
     line-opacity: 0.5;
   }
 }
