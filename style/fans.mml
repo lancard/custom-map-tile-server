@@ -2185,7 +2185,7 @@ Layer:
     Datasource:
       <<: *osm2pgsql
       table: |-
-        (SELECT * FROM navaid) AS aeroway_point
+        (SELECT navaid.*, (select count(*) from airway where fixStart = navaid.name or fixEnd = navaid.name) as airway_count FROM navaid) AS aeroway_point
     properties:
       cache-features: true
       minzoom: 1

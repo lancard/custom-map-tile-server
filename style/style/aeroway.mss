@@ -199,7 +199,6 @@
     text-dy: 10;
   }
 
-
   [vor_type = 'VORDME'] {
     marker-file: url('symbols/aeroway/vordme.svg');
     text-name: [name] + "\n" + [frequency];
@@ -209,9 +208,6 @@
     text-name: [name] + "\n" + [frequency];
   }
   [vor_type = 'VORTAC'] {
-    marker-width: 20;
-    marker-height: 20;
-    marker-fill: blue;
     marker-file: url('symbols/aeroway/vortac.svg');
     text-name: [name] + "\n" + [frequency];
     text-fill: blue;
@@ -243,6 +239,12 @@
       marker-height: 7;
       text-size: 8;
     }
+  }
+
+  [airway_count > 0] {
+    marker-width: 20;
+    marker-height: 20;
+    marker-fill: blue;
   }
 }
 
