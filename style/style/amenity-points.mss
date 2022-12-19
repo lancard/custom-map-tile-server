@@ -1358,12 +1358,6 @@
     marker-fill: @man-made-icon;
   }
 
-  [feature = 'natural_peak'][zoom >= 11] {
-    marker-file: url('symbols/natural/peak.svg');
-    marker-fill: @landform-color;
-    marker-clip: false;
-  }
-
   [feature = 'natural_volcano'][zoom >= 11] {
     marker-file: url('symbols/natural/peak.svg');
     marker-fill: #d40000;
@@ -1821,7 +1815,6 @@
     text-halo-fill: rgba(255, 255, 255, 0.6);
   }
 
-  [feature = 'natural_peak'][zoom >= 13],
   [feature = 'natural_volcano'][zoom >= 13],
   [feature = 'natural_saddle'][zoom >= 15],
   [feature = 'tourism_viewpoint'][zoom >= 16] {

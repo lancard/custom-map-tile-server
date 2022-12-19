@@ -1,3 +1,19 @@
+#terain-mountain[zoom >= 12] {
+  marker-file: url('symbols/natural/peak.svg');
+  marker-fill: @landform-color;
+  marker-clip: false;
+  
+  text-name: [name] + "\n" + [elevation] + "ft";
+  text-size: @standard-font-size;
+  text-wrap-width: @standard-wrap-width;
+  text-line-spacing: @standard-line-spacing-size;
+  text-fill: darken(@landform-color, 30%);
+  text-dy: 7;
+  text-face-name: @standard-font;
+  text-halo-radius: @standard-halo-radius;
+  text-halo-fill: @standard-halo-fill;
+}
+
 #airport-line {
   [aeroway = 'runway'] {
     [zoom >= 1] {

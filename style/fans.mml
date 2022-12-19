@@ -1435,7 +1435,7 @@ Layer:
                 E'\n' || CONCAT( -- by doing this with a || if both the ele and height branches are null, this entire expression is null and only name is used
                   CASE
                     WHEN (tags ? 'ele') AND tags->'ele' ~ '^-?\d{1,4}(\.\d+)?$'
-                      AND ("natural" IN ('peak', 'volcano', 'saddle')
+                      AND ("natural" IN ('volcano', 'saddle')
                         OR tourism = 'alpine_hut' OR (tourism = 'information' AND tags->'information' = 'guidepost')
                         OR amenity = 'shelter')
                     THEN CONCAT(REPLACE(ROUND((tags->'ele')::NUMERIC)::TEXT, '-', U&'\2212'), U&'\00A0', 'm') END,
@@ -1479,7 +1479,7 @@ Layer:
                                                     'residential', 'garages', 'meadow', 'grass', 'allotments', 'forest', 'farmyard', 'farmland',
                                                     'greenhouse_horticulture', 'retail', 'industrial', 'railway', 'commercial', 'brownfield', 'landfill',
                                                     'construction', 'salt_pond', 'military', 'plant_nursery') THEN landuse END,
-                'natural_' || CASE WHEN "natural" IN ('peak', 'volcano', 'saddle', 'cave_entrance') AND way_area IS NULL THEN "natural" END,
+                'natural_' || CASE WHEN "natural" IN ('volcano', 'saddle', 'cave_entrance') AND way_area IS NULL THEN "natural" END,
                 'natural_' || CASE WHEN "natural" IN ('wood', 'water', 'mud', 'wetland', 'bay', 'spring', 'scree', 'shingle', 'bare_rock', 'sand', 'heath',
                                                       'grassland', 'scrub', 'beach', 'glacier', 'tree', 'strait', 'cape')
                                                       THEN "natural" END,
@@ -1511,7 +1511,7 @@ Layer:
               ) AS feature,
               access,
               CASE
-                WHEN "natural" IN ('peak', 'volcano', 'saddle') THEN
+                WHEN "natural" IN ('volcano', 'saddle') THEN
                   CASE
                     WHEN tags->'ele' ~ '^-?\d{1,4}(\.\d+)?$' THEN (tags->'ele')::NUMERIC
                   END
@@ -2130,6 +2130,16 @@ Layer:
 
 
 # custom aviation --------------------------------------------------------------------------------------------------------------------------------
+  - id: terain-mountain
+    geometry: point
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: |-
+        (select way, name, round((tags->'ele')::numeric * 3.28084) as elevation from planet_osm_point where "natural" ='peak' and name is not null and tags->'ele' ~ '^[0-9]+$' and (tags->'ele')::NUMERIC > 200) AS terain_mountain
+    properties:
+      cache-features: true
+      minzoom: 1
   - id: airport-line
     geometry: linestring
     <<: *extents
@@ -2166,3 +2176,5 @@ Layer:
     properties:
       cache-features: true
       minzoom: 1
+
+  
