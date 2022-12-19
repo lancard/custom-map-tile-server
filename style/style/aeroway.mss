@@ -68,6 +68,8 @@
   marker-file: url('symbols/helipad.16.svg');
   marker-clip: false;
   marker-fill: #8461C4;
+  marker-width: 7;
+  marker-height: 7;
 
   text-name: "[name]";
   text-size: @standard-font-size;
