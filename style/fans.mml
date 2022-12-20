@@ -2170,7 +2170,7 @@ Layer:
       cache-features: true
       minzoom: 1      
   - id: airport-location
-    geometry: linestring
+    geometry: point
     <<: *extents
     Datasource:
       <<: *osm2pgsql
