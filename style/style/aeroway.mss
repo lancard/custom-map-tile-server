@@ -89,13 +89,15 @@
   marker-height: 6;
 
   text-name: [icao_code] + "\n" + [elevation] + "ft";
-  text-size: 15;
-  text-dy: 7;
-  text-spacing: 300;
-  text-clip: false;
-  text-placement: line;
-  text-face-name: @standard-font;
+  text-size: 9;
+  text-wrap-width: @standard-wrap-width;
+  text-line-spacing: @standard-line-spacing-size;
   text-fill: #CFAACA;
+  text-dy: 7;
+  text-face-name: @standard-font;
+  text-halo-radius: @standard-halo-radius;
+  text-halo-fill: @standard-halo-fill;
+  text-allow-overlap: true;
 }
 
 #aeroway-line[airway_type = 'VFR'][zoom > 9] {
