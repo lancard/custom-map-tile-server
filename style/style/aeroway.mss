@@ -86,7 +86,7 @@
 #airport-location[zoom > 1][zoom < 8] {
   marker-fill: #AAC7AA;
 
-  text-name: [name] + "\n" + [elevation] + "ft";
+  text-name: [icao_code] + "\n" + [elevation] + "ft";
   text-size: 15;
   text-dy: 7;
   text-spacing: 300;
