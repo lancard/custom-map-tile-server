@@ -88,16 +88,21 @@
   marker-width: 6;
   marker-height: 6;
 
-  text-name: [icao_code] + "\n" + [elevation] + "ft";
-  text-size: 9;
-  text-wrap-width: @standard-wrap-width;
-  text-line-spacing: @standard-line-spacing-size;
-  text-fill: #CFAACA;
-  text-dy: 7;
-  text-face-name: @standard-font;
-  text-halo-radius: @standard-halo-radius;
-  text-halo-fill: @standard-halo-fill;
-  text-allow-overlap: true;
+  [zoom > 3] {
+    text-name: [icao_code] + "\n" + [elevation] + "ft";
+    [zoom < 5] {
+      text-name: [icao_code];
+    }
+    text-size: 9;
+    text-wrap-width: @standard-wrap-width;
+    text-line-spacing: @standard-line-spacing-size;
+    text-fill: #CFAACA;
+    text-dy: 7;
+    text-face-name: @standard-font;
+    text-halo-radius: @standard-halo-radius;
+    text-halo-fill: @standard-halo-fill;
+    text-allow-overlap: true;
+  }
 }
 
 #aeroway-line[airway_type = 'VFR'][zoom > 9] {
