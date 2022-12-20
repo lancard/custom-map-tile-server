@@ -87,6 +87,7 @@
   marker-fill: #CFAACA;
   marker-width: 6;
   marker-height: 6;
+  marker-allow-overlap: true;
 
   [zoom > 3] {
     text-name: [icao_code] + "\n" + [elevation] + "ft";
