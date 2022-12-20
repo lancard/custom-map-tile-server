@@ -84,7 +84,9 @@
 }
 
 #airport-location[zoom > 1][zoom < 8] {
-  marker-fill: #AAC7AA;
+  marker-fill: #CFAACA;
+  marker-width: 6;
+  marker-height: 6;
 
   text-name: [icao_code] + "\n" + [elevation] + "ft";
   text-size: 15;
@@ -93,7 +95,7 @@
   text-clip: false;
   text-placement: line;
   text-face-name: @standard-font;
-  text-fill: #667866;
+  text-fill: #CFAACA;
 }
 
 #aeroway-line[airway_type = 'VFR'][zoom > 9] {
