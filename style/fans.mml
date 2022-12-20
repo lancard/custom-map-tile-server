@@ -2175,7 +2175,7 @@ Layer:
     Datasource:
       <<: *osm2pgsql
       table: |-
-        (SELECT * FROM airport) AS airport_location
+        (SELECT * FROM airport order by airport_type) AS airport_location
     properties:
       cache-features: true
       minzoom: 2
