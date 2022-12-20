@@ -83,6 +83,19 @@
   text-allow-overlap: true;
 }
 
+#airport-location[zoom > 1][zoom < 8] {
+  marker-fill: #AAC7AA;
+
+  text-name: [name] + "\n" + [elevation] + "ft";
+  text-size: 15;
+  text-dy: 7;
+  text-spacing: 300;
+  text-clip: false;
+  text-placement: line;
+  text-face-name: @standard-font;
+  text-fill: #667866;
+}
+
 #aeroway-line[airway_type = 'VFR'][zoom > 9] {
   text-name: "[name]";
   text-size: 10;

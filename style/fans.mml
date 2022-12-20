@@ -2169,6 +2169,16 @@ Layer:
     properties:
       cache-features: true
       minzoom: 1      
+  - id: airport-location
+    geometry: linestring
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: |-
+        (SELECT * FROM airport) AS airport_location
+    properties:
+      cache-features: true
+      minzoom: 2
   - id: aeroway-line
     geometry: linestring
     <<: *extents
