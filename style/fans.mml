@@ -2175,7 +2175,7 @@ Layer:
     Datasource:
       <<: *osm2pgsql
       table: |-
-        (SELECT * FROM airport order by airport_type) AS airport_location
+        (SELECT * FROM airport where length(icao_code) = 4 and iata_code <> '' order by airport_type) AS airport_location
     properties:
       cache-features: true
       minzoom: 2
